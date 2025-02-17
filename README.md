@@ -1,16 +1,16 @@
-MNIST Classification with CNN
+### MNIST Classification with CNN
 
-Overview
+# Overview
 
 This project implements a Convolutional Neural Network (CNN) to classify handwritten digits from the MNIST dataset. The model achieves high accuracy on the test set and is trained using TensorFlow/Keras.
 
-Requirements
+## Requirements
 
 To run this project, install the following dependencies:
 
 pip install tensorflow numpy matplotlib
 
-Usage
+## Usage
 
 Clone this repository:
 
