@@ -26,7 +26,7 @@ Evaluate the model:
 python evaluate.py
 
 Model Architecture
-
+Q
 Input Layer: 28x28 grayscale images
 
 Convolutional Layers
