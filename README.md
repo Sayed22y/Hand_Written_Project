@@ -1,17 +1,57 @@
-# Handwritten Digit Recognition with CNN
+MNIST Classification with CNN
 
-A convolutional neural network (CNN) model for classifying handwritten digits from the MNIST dataset, achieving over 98% accuracy.
+Overview
 
-## Key Features
-- Built with Keras and TensorFlow
-- Two convolutional layers with max pooling
-- Dropout layers for regularization
-- Adam optimizer with categorical focal loss
-- Model saving/loading functionality
-- Achieves 98.95% test accuracy
+This project implements a Convolutional Neural Network (CNN) to classify handwritten digits from the MNIST dataset. The model achieves high accuracy on the test set and is trained using TensorFlow/Keras.
 
-## Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/handwritten-digit-recognition.git
-cd handwritten-digit-recognition
+Requirements
+
+To run this project, install the following dependencies:
+
+pip install tensorflow numpy matplotlib
+
+Usage
+
+Clone this repository:
+
+git clone <repository_url>
+cd <repository_folder>
+
+Run the training script:
+
+python train.py
+
+Evaluate the model:
+
+python evaluate.py
+
+Model Architecture
+
+Input Layer: 28x28 grayscale images
+
+Convolutional Layers
+
+Max-Pooling Layers
+
+Fully Connected Layers
+
+Output Layer with Softmax Activation
+
+Training and Evaluation
+
+Dataset: MNIST (60,000 training, 10,000 testing images)
+
+Optimizer: Adam
+
+Loss Function: Categorical Crossentropy
+
+Accuracy: ~99%
+
+Results
+
+The trained CNN achieves high accuracy on the test dataset, effectively recognizing handwritten digits.
+
+License
+
+This project is open-source under the MIT License.
+
