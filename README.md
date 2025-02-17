@@ -1,57 +1,70 @@
-### MNIST Classification with CNN
+## Handwritten Digit Recognition with CNN
 
-# Overview
+This project implements a Convolutional Neural Network (CNN) using Keras to classify handwritten digits from the MNIST dataset.
 
-This project implements a Convolutional Neural Network (CNN) to classify handwritten digits from the MNIST dataset. The model achieves high accuracy on the test set and is trained using TensorFlow/Keras.
+## Dataset
 
-## Requirements
+MNIST: A dataset of 60,000 training images and 10,000 test images of handwritten digits (0-9), each of size 28x28 pixels.
 
-To run this project, install the following dependencies:
+## Model Architecture
 
-pip install tensorflow numpy matplotlib
+Conv2D: 2 convolutional layers with ReLU activation
 
-## Usage
+MaxPooling2D: 1 max-pooling layer
 
-Clone this repository:
+Dropout: Applied to prevent overfitting
 
-git clone <repository_url>
-cd <repository_folder>
+Flatten: Converts the 2D feature maps into a 1D vector
 
-Run the training script:
+Dense: Fully connected layers with ReLU and softmax activation
 
-python train.py
+## Installation
 
-Evaluate the model:
+To run this project, install the required dependencies:
 
-python evaluate.py
+```bash
+pip install keras
+```
 
-Model Architecture
-Q
-Input Layer: 28x28 grayscale images
+## Running the Project
 
-Convolutional Layers
+Load the dataset and preprocess it.
 
-Max-Pooling Layers
+Build and train the CNN model.
 
-Fully Connected Layers
+Evaluate the model on test data.
 
-Output Layer with Softmax Activation
+Save the trained model.
 
-Training and Evaluation
+Run the following command to execute the script:
+```bash
+python your_script.py
+```
+## Training Results
 
-Dataset: MNIST (60,000 training, 10,000 testing images)
+Epochs: 10
 
-Optimizer: Adam
+Batch size: 10
 
-Loss Function: Categorical Crossentropy
+Final Test Accuracy: ~98.9%
 
-Accuracy: ~99%
+## Model Saving
 
-Results
+The trained model is saved in HDF5 format:
+```bash
+model.save('HandWritten.h5')
+```
+## Evaluation
 
-The trained CNN achieves high accuracy on the test dataset, effectively recognizing handwritten digits.
+Run the following to evaluate the model:
+```bash
+python -c "import keras.models as km; model = km.load_model('HandWritten.h5'); print(model.evaluate(x_test, y_test))"
+```
+## Dependencies
 
-License
+Python 3.12
 
-This project is open-source under the MIT License.
+Keras
+
+NumPy
 
